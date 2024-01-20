@@ -1,12 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
+import Dashboard from './dashboard';
 
 function App() {
+
+  const [isLoggedIn, setLoggedIn] = useState(false);
+  const handleLogin = () => {
+    const isLoginSuccessful = true; 
+
+    if (isLoginSuccessful) {
+      setLoggedIn(true);
+    } else {
+      
+    }
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>Login</h1>
-        <form>
+        {isLoggedIn ? (
+          <Dashboard />
+        ) : (
+        <form onSubmit={handleLogin}>
           <label>
             Username:
             <input type="text" name="username" />
@@ -17,7 +33,7 @@ function App() {
           </label>
           <button type="submit">Login</button>
         </form>
-      </header>
+        )}</header>
     </div>
   );
 }
