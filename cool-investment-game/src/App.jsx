@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Login from './login';
 import Signup from './signup';
+import Game from './game';
 import Dashboard from './dashboard';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -56,6 +57,7 @@ function App() {
           <Routes>
             <Route path="/" element={!isLoggedIn ? <Login onLoginSuccess={() => setLoggedIn(true)} /> : <Dashboard />} />
             <Route path="/signup" element={<Signup onSignupSuccess={() => setLoggedIn(true)} />} />
+            <Route path="/game" element={<Game />} />
             {/* ... other routes */}
           </Routes>
         </header>

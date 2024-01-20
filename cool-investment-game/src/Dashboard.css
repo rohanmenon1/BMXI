@@ -34,7 +34,31 @@ body, html {
     margin-bottom: 2px; /* Space below the title */
   }
 
+  /* In Dashboard.css */
+
+  .play-button {
+  /* Style your button */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .play-button img {
+  /* You can specify dimensions if needed */
+    width: 300px;  
+    height: 300px;
+    display: block; /* This removes extra space beneath the image inside the button */
+  }
   
+  .play-button:hover {
+    /*background-color: #46a049; /* Slightly darker green on hover */
+    transform: scale(1.25); /* Slightly increase button size on hover */
+  }
+  
+  .play-button:active {
+    transform: scale(0.95); /* Slightly decrease button size when clicked */
+  }
   
   .section {
     display: flex;

@@ -1,5 +1,9 @@
 import React from 'react';
 import './Dashboard.css'; // Ensure this points to your CSS file
+import { useNavigate } from 'react-router-dom';
+
+import playButtonImage from './money.png';
+
 
 const Dashboard = ({ loginID, previousScore, gamesPlayed }) => {
   // Static leaderboard data defined within the component
@@ -8,6 +12,12 @@ const Dashboard = ({ loginID, previousScore, gamesPlayed }) => {
     { name: 'Bob', score: 110 },
     // ... more leaderboard entries
   ];
+  const navigate = useNavigate();
+
+  const handlePlay = () => {
+    navigate('/game'); // This will navigate to the Game component when called
+  };
+
 
   return (
     <div className="dashboard-container">
@@ -19,7 +29,10 @@ const Dashboard = ({ loginID, previousScore, gamesPlayed }) => {
         <p>Number of games played: {gamesPlayed}</p>
       </div>
       <div className="section main-content">
-        {/* Main content goes here */}
+        {/* Add the play button here */}
+        <button className="play-button" onClick={handlePlay}>
+          <img src={playButtonImage} alt="" /> { }
+        </button>
       </div>
       <div className="section leaderboard">
         <h2>Leaderboard</h2>
