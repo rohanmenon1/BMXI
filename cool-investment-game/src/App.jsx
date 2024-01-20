@@ -97,9 +97,6 @@ function readUserData(userId){
   });
 }
 
-
-
-  
 //writeUserData(1, "Rohan", "wow", "sdasd");
 writeStockData(1, "Google", 999, "999,999,100");
 
