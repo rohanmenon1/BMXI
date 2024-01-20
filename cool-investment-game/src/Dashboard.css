@@ -1,0 +1,73 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .dashboard {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Align items vertically */
+    height: 80vh; /* Use vh (viewport height) units to fill the screen */
+    width: 100vw; /* Use vw (viewport width) units to fill the screen */
+    background-color: #333; /* Dark background for contrast */
+    color: #fff;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  }
+  
+  
+  .section {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: space-around; /* Evenly distribute space around items */
+    align-items: center; /* Center items horizontally */
+    padding: 20px;
+    margin: 10px;
+    flex-grow: 0.5; /* Flex items will grow evenly */
+    border-radius: 8px;
+    background: #424242; /* Slightly lighter section background */
+  }
+    
+  /* Main content section */
+  .main-content {
+    flex-grow: 2; /* Main content takes more space */
+  }
+  
+  
+  /* Add styles for leaderboard and user stats list items */
+  .leaderboard ul, .user-stats ul {
+    width: 100%;
+    list-style-type: none;
+    padding: 0;
+  }
+.leaderboard .entry-0 { background-color: #ff4757; } /* 1st place */
+.leaderboard .entry-1 { background-color: #ffa502; } /* 2nd place */
+.leaderboard .entry-2 { background-color: #ff7f50; } /* 3rd place */
+.leaderboard .entry:not(.entry-0):not(.entry-1):not(.entry-2) { background-color: #2ed573; } /* Other places */
+.leaderboard li {
+    display: flex;
+    justify-content: space-between; /* This will create space between the flex items */
+    align-items: center; /* This will vertically center align items in the list */
+  }
+  
+  .leaderboard .name {
+    flex-grow: 1; /* This allows the name to take up any available space */
+    margin: 0 10px; /* This adds some space to the left and right of the name */
+  }
+  
+.leaderboard .entry:hover {
+  border-color: #ffffff; /* White border on hover */
+}
+
+  
+  /* Further styling for the list items */
+  .leaderboard li, .user-stats li {
+    background-color: #3a3a3a; /* A distinct background for list items */
+    margin: 10px 0;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* You can add more styling as needed */
