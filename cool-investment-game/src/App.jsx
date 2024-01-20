@@ -67,10 +67,10 @@ function App() {
 
 function writeUserData(userId, userName, emailId, password) {
   const db = database;
-  set(ref(db, 'users/' + userId), {
+  set(ref(db, 'users/'), {
     username: userName,
     email: emailId,
-    profile_picture : password
+    pass : password
   });
 }
 
@@ -83,6 +83,9 @@ function writeStockData(stockId, stockName, stockPrice, arrayOfPrices) {
   });
 }
 
+
+
 writeUserData(1, "Rohan", "wow", "sdasd");
+writeStockData(1, "Google", 999, "999,999,100");
 
 export default App;
