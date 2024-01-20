@@ -1,0 +1,83 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #121212; /* Or any color you prefer */
+  }
+  
+  .login-box {
+    padding: 40px;
+    background: #333; /* Or any color you prefer */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .login-header {
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .login-label {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .login-label input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+  
+  .login-button {
+    background-color: #7289DA; /* Discord-like blue for the button */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .login-button:hover {
+    background-color: #5b6eae;
+  }
+
+  .login-links {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .forgot-password, .signup-link {
+    color: #7289DA; /* Use a color that matches your design */
+    text-decoration: none; /* Removes underline from links */
+  }
+  
+  .signup-text {
+    display: block; /* Ensures it sits on a new line */
+    margin-top: 10px; /* Spacing above the sign up text */
+  }
+  
+  /* Add a hover effect for the links */
+  .forgot-password:hover, .signup-link:hover {
+    text-decoration: underline; /* Adds underline on hover */
+  }
+  .signup-link {
+    color: #7289DA; /* Use a color that matches your design */
+    text-decoration: none; /* Removes underline from links */
+  }
+  
+  .signup-link:hover {
+    text-decoration: underline; /* Adds underline on hover */
+  }
+  

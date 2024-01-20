@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Login from './login';
+import Signup from './signup';
 import Dashboard from './dashboard';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -47,25 +50,17 @@ function App() {
 
 
   return (
-    <div className="App">
-      <header className="App-header">
-        {!isLoggedIn && <h1>Login</h1>}
-        {isLoggedIn ? (
-          <Dashboard />
-        ) : (
-        <form onSubmit={handleLogin}>
-          <label>
-            Username:
-            <input type="text" name="username" />
-          </label>
-          <label>
-            Password:
-            <input type="password" name="password" />
-          </label>
-          <button type="submit">Login</button>
-        </form>
-        )}</header>
-    </div>
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <Routes>
+            <Route path="/" element={!isLoggedIn ? <Login onLoginSuccess={() => setLoggedIn(true)} /> : <Dashboard />} />
+            <Route path="/signup" element={<Signup onSignupSuccess={() => setLoggedIn(true)} />} />
+            {/* ... other routes */}
+          </Routes>
+        </header>
+      </div>
+    </Router>
   );
 }
 
