@@ -74,6 +74,15 @@ function writeUserData(userId, userName, emailId, password) {
   });
 }
 
+function writeStockData(stockId, stockName, stockPrice, arrayOfPrices) {
+  set(ref(database, 'stock/'), {
+    stockId: stockId,
+    stockName: stockName,
+    stockPrice: stockPrice,
+    arrayOfPrices: arrayOfPrices
+  });
+}
+
 writeUserData(1, "Rohan", "wow", "sdasd");
 
 export default App;
