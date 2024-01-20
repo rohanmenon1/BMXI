@@ -8,6 +8,9 @@ import { getDatabase } from "firebase/database";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
+//Code for reading and writing
+import { ref, set } from "firebase/database";
+
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -40,6 +43,9 @@ function App() {
     }
   };
 
+
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -62,5 +68,17 @@ function App() {
     </div>
   );
 }
+
+
+function writeUserData(userId, userName, emailId, password) {
+  const db = database;
+  set(ref(db, 'users/' + userId), {
+    username: userName,
+    email: emailId,
+    profile_picture : password
+  });
+}
+
+writeUserData(1, "Rohan", "wow", "sdasd");
 
 export default App;
