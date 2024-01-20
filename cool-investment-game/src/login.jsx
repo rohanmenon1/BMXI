@@ -22,7 +22,7 @@ const Login = ({ onLoginSuccess }) => {
   return (
     <div className="login-container">
       <div className="login-box">
-        <h1 className="login-header">Login</h1>
+        <h1 className="login-header">cool-investment-game v3.2</h1>
         <form onSubmit={handleLogin} className="login-form">
           <label className="login-label">
             Username:
