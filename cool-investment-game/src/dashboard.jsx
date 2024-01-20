@@ -11,7 +11,16 @@ const Dashboard = ({ loginID, previousScore, gamesPlayed }) => {
   const stocksData = [
     { name: 'Dow Jones', trend: 'rising', price: '35,000' },
     { name: 'S&P 500', trend: 'falling', price: '4,500' },
-    { name: 'mockStock1', trend: 'rising', price: '22222' },
+    { name: 'AAPL', trend: 'rising', price: '22222' },
+    { name: 'BA', trend: 'rising', price: '35,000' },
+    { name: 'DIS', trend: 'falling', price: '4,500' },
+    { name: 'NKE', trend: 'rising', price: '22222' },
+    { name: 'AMZN', trend: 'rising', price: '35,000' },
+    { name: 'HD', trend: 'falling', price: '4,500' },
+    { name: 'AAPL', trend: 'rising', price: '22222' },
+    { name: 'BA', trend: 'rising', price: '35,000' },
+    { name: 'DIS', trend: 'falling', price: '4,500' },
+    { name: 'NKE', trend: 'rising', price: '22222' },
     // ... more stocks
   ];
   const leaderboardData = [
@@ -43,9 +52,11 @@ const Dashboard = ({ loginID, previousScore, gamesPlayed }) => {
         <div className="stocks-list">
           {stocksData.map((stock, index) => (
             <div key={index} className="stock-item">
-              <span className="stock-name">{stock.name}</span>
-              <span className={`stock-trend ${stock.trend}`}></span>
-              <span className="stock-price">{stock.price}</span>
+              <div className="stock-column stock-name">{stock.name}</div>
+              <div className="stock-column stock-trend-column">
+                <span className={`stock-trend ${stock.trend}`}></span>
+              </div>
+              <div className="stock-column stock-price">{stock.price}</div>
             </div>
           ))}
         </div>
