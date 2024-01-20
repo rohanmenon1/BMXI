@@ -1,35 +1,50 @@
 import React from 'react';
 import './Dashboard.css'; 
-
-const Dashboard = ({ loginID, previousScore, gamesPlayed }) => {
+import writerStocks from './writeStock'; 
+import writerUser from './writeUser';
+const Game = ({ loginID, previousScore, gamesPlayed }) => {
   
   const leaderboardData = [
-    { name: 'stock 1', score: 110 },
-    { name: 'stock 2', score: 110 },
-    { name: 'stock 3', score: 110 },
-    { name: 'stock 4', score: 110 },
-    { name: 'stock 5', score: 110 },
-    { name: 'stock 6', score: 110 },
-    { name: 'stock 7', score: 110 },
-    { name: 'stock 8', score: 110 },
-    { name: 'stock 9', score: 110 },
-    { name: 'stock 10', score: 110 }
+    { name: 'User 1', score: 110 },
+    { name: 'User 2', score: 110 },
+    { name: 'User 3', score: 110 },
+    { name: 'User 4', score: 110 },
+    { name: 'User 5', score: 110 },
+   
   ];
 
   return (
     <div className="dashboard">
-      <div className="section user-stats">
-        <h2>Welcome {loginID}</h2>
-        <p>Your previous score: {previousScore}</p>
-        <p>Number of games played: {gamesPlayed}</p>
+      <div className="section stock-list">
+        <h2>Select a stock{loginID}</h2>
+        <li>
+          <button>Gluegle: GGL</button> <br/>
+        </li>
+        <li>
+          <button>Netflyx: NTX</button> <br/>
+        </li>
+        <li>
+          <button>Spotifree: SPT</button> <br/>
+        </li>
+        <li>
+          <button>Amazoom: AMZ </button> <br/>
+        </li>
+        <li>
+          <button>Blomberg: BML </button> <br/>
+        </li>
       </div>
       <div className="section main-content">
+        <marquee> AI News Goes Here.                          Warren Buffet says buy Google Stock and eat beans</marquee>
+        <body>
+          CASH: 10000$,  TIME LEFT: 45s
+        </body>
         {
           <script>
             var display = document.querySelector('#timer');
             startTimer(300, display);
           </script>
         }
+
       </div>
       <div className="section leaderboard">
         <h2>Leaderboard</h2>
@@ -69,4 +84,4 @@ const Dashboard = ({ loginID, previousScore, gamesPlayed }) => {
   }
 };
 
-export default Dashboard;
+export default Game;
