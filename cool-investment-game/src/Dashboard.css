@@ -127,27 +127,24 @@ body, html {
     align-items: center;
     margin-bottom: 10px;
     padding: 5px;
-    background-color: #333; /* Dark background for each item */
+    background-color: #040404; /* Dark background for each item */
     color: #fff;
   }
   
-  .stock-name {
-    flex-grow: 1;
-  }
-  
   .stock-trend {
-    width: 30px; /* Width of the line */
-    height: 3px; /* Height of the line */
-    display: block;
-    margin: 0 auto; /* Center the line */
+    width: 50px; /* Width of the graph line */
+    height: 70px; /* Height of the graph line */
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 5px; /* Add space between the graph line and the numbers */
   }
   
   .stock-trend.rising {
-    background-color: green;
+    background-image: url('stock_rising.jpg');
   }
   
   .stock-trend.falling {
-    background-color: red;
+    background-image: url('stock_falling.jpg');
   }
   
   .stock-price {
