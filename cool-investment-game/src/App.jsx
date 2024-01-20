@@ -13,7 +13,7 @@ import { getDatabase } from "firebase/database";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 //Code for reading and writing
-import { ref, set } from "firebase/database";
+import { ref, set, onValue } from "firebase/database";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -84,6 +84,19 @@ function writeStockData(stockId, stockName, stockPrice, arrayOfPrices) {
     arrayOfPrices: arrayOfPrices
   });
 }
+
+//import { getDatabase, ref, onValue } from "firebase/database";
+
+const db = getDatabase();
+
+function readUserData(userId){
+  const starCountRef = ref(db, 'users/' + userId + '/starCount');
+  onValue(starCountRef, (snapshot) => {
+    const data = snapshot.val();
+    useState(userId, data);
+  });
+}
+
 
 
   
