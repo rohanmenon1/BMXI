@@ -10,6 +10,8 @@ const Dashboard = ({ loginID, previousScore, gamesPlayed }) => {
   ];
 
   return (
+    <div className="dashboard-container">
+    <h1 className="dashboard-header">Dashboard</h1> {/* Add this line for the Dashboard header */}
     <div className="dashboard">
       <div className="section user-stats">
         <h2>Welcome {loginID}</h2>
@@ -32,6 +34,7 @@ const Dashboard = ({ loginID, previousScore, gamesPlayed }) => {
         </ul>
       </div>
     </div>
+  </div>
   );
 };
 

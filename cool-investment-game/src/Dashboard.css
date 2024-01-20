@@ -5,29 +5,50 @@ body, html {
     width: 100%;
   }
   
+  .dashboard-container {
+    text-align: center;
+    width: 100vw;
+  }
+  
+  .dashboard-header {
+    padding: 10px 0;
+    background-color: #333; /* Choose a color that fits your design */
+    color: #fff;
+    font-size: 2.5em; /* Adjust the font size as needed */
+  }
+  
   .dashboard {
     display: flex;
     justify-content: center;
-    align-items: stretch; /* Align items vertically */
-    height: 80vh; /* Use vh (viewport height) units to fill the screen */
-    width: 100vw; /* Use vw (viewport width) units to fill the screen */
-    background-color: #333; /* Dark background for contrast */
-    color: #fff;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    align-items: stretch;
+    padding-top: 0.5px; /* Add some space between the header and the sections */
+    height: calc(100vh - 100px); /* Adjust height to account for the header */
+    box-sizing: border-box;
   }
+  
+  /* Continue with your existing .section and other styles */
+  
+
+  .main-content h1 {
+    color: #fff; /* Title color */
+    margin-bottom: 2px; /* Space below the title */
+  }
+
   
   
   .section {
     display: flex;
     flex-direction: column; /* Stack children vertically */
-    justify-content: space-around; /* Evenly distribute space around items */
+    justify-content: flex-start; /* Align items to the top */
     align-items: center; /* Center items horizontally */
     padding: 20px;
     margin: 10px;
-    flex-grow: 0.5; /* Flex items will grow evenly */
+    flex-grow: 0.3; /* Adjust flex-grow as needed */
     border-radius: 8px;
     background: #424242; /* Slightly lighter section background */
+    height: calc(100% - 150px); /* Adjust the height to account for padding */
   }
+  
     
   /* Main content section */
   .main-content {
