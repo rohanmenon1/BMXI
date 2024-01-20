@@ -114,6 +114,47 @@ body, html {
     width: 100%;
     box-sizing: border-box;
   }
+
+  .stocks-list {
+    width: 100%;
+    max-height: 300px; /* Adjust as needed */
+    overflow-y: auto; /* Allows scrolling within the list */
+  }
+  
+  .stock-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px;
+    background-color: #333; /* Dark background for each item */
+    color: #fff;
+  }
+  
+  .stock-name {
+    flex-grow: 1;
+  }
+  
+  .stock-trend {
+    width: 30px; /* Width of the line */
+    height: 3px; /* Height of the line */
+    display: block;
+    margin: 0 auto; /* Center the line */
+  }
+  
+  .stock-trend.rising {
+    background-color: green;
+  }
+  
+  .stock-trend.falling {
+    background-color: red;
+  }
+  
+  .stock-price {
+    color: #fff; /* White color for the price */
+    font-weight: bold; /* Makes the price stand out */
+    font-size: 1rem; /* Adjust the size as needed */
+  }
   
   /* You can add more styling as needed */
   

@@ -7,6 +7,13 @@ import playButtonImage from './money.png';
 
 const Dashboard = ({ loginID, previousScore, gamesPlayed }) => {
   // Static leaderboard data defined within the component
+
+  const stocksData = [
+    { name: 'Dow Jones', trend: 'rising', price: '35,000' },
+    { name: 'S&P 500', trend: 'falling', price: '4,500' },
+    { name: 'mockStock1', trend: 'rising', price: '22222' },
+    // ... more stocks
+  ];
   const leaderboardData = [
     { name: 'Alice', score: 120 },
     { name: 'Bob', score: 110 },
@@ -33,6 +40,15 @@ const Dashboard = ({ loginID, previousScore, gamesPlayed }) => {
         <button className="play-button" onClick={handlePlay}>
           <img src={playButtonImage} alt="" /> { }
         </button>
+        <div className="stocks-list">
+          {stocksData.map((stock, index) => (
+            <div key={index} className="stock-item">
+              <span className="stock-name">{stock.name}</span>
+              <span className={`stock-trend ${stock.trend}`}></span>
+              <span className="stock-price">{stock.price}</span>
+            </div>
+          ))}
+        </div>
       </div>
       <div className="section leaderboard">
         <h2>Leaderboard</h2>
