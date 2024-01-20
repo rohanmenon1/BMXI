@@ -67,7 +67,7 @@ function App() {
 
 function writeUserData(userId, userName, emailId, password) {
   const db = database;
-  set(ref(db, 'users/'), {
+  set(ref(db, 'users/' + userId), {
     username: userName,
     email: emailId,
     pass : password
@@ -75,7 +75,7 @@ function writeUserData(userId, userName, emailId, password) {
 }
 
 function writeStockData(stockId, stockName, stockPrice, arrayOfPrices) {
-  set(ref(database, 'stock/'), {
+  set(ref(database, 'stock/' + stockId), {
     stockId: stockId,
     stockName: stockName,
     stockPrice: stockPrice,
@@ -85,7 +85,7 @@ function writeStockData(stockId, stockName, stockPrice, arrayOfPrices) {
 
 
 
-writeUserData(1, "Rohan", "wow", "sdasd");
+//writeUserData(1, "Rohan", "wow", "sdasd");
 writeStockData(1, "Google", 999, "999,999,100");
 
 export default App;
