@@ -18,15 +18,10 @@ const Game = ({ loginID, previousScore, gamesPlayed }) => {
       <div className="section stock-list">
         <h2>Select a stock{loginID}</h2>
         <div className="button-container">
-          <button>Google: GGL</button> <br/>
+          <button >Google: GGL</button> <br/>
           <button>Netflix: NTX</button> <br/>
           <button>Spotify: SPT</button> <br/>
           <button>Amazon: AMZ </button> <br/>
-          <button>Blomberg: BML </button> <br/>
-          <button>Gluegle: GGL</button> <br/>
-          <button>Netflyx: NTX</button> <br/>
-          <button>Spotifree: SPT</button> <br/>
-          <button>Amazoom: AMZ </button> <br/>
           <button>Blomberg: BML </button> <br/>
           </div>
       </div>
@@ -35,12 +30,7 @@ const Game = ({ loginID, previousScore, gamesPlayed }) => {
         <body>
           CASH: 10000$,  TIME LEFT: 45s
         </body>
-        {
-          <script>
-            var display = document.querySelector('#timer');
-            startTimer(300, display);
-          </script>
-        }
+        
 
       </div>
       <div className="section leaderboard">
@@ -60,6 +50,9 @@ const Game = ({ loginID, previousScore, gamesPlayed }) => {
 
   function stockChange(price) {
     price = Math.random() * 20 - 10;
+    while (true) {
+      console.log("Running")
+    }
   }
 
   function startTimer(duration, display) {
