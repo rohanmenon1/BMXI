@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import './Login.css'; // Make sure to create a Login.css file for styling
+import './Login.css'; 
 import { Link } from 'react-router-dom';
-import readUserData from 'readUserData.js'
+import readUserData from './readUserData.js'
+import counterData from './readCounter.js';
 
 
 const Login = ({ onLoginSuccess }) => {
@@ -10,9 +11,12 @@ const Login = ({ onLoginSuccess }) => {
 
   const handleLogin = (event) => {
     event.preventDefault();
-    // TODO: Add actual login logic here
-    const isLoginSuccessful = readUserData(username, password); 
-
+    let isLoginSuccessful = false; 
+    for(let i = 1; i <= counterData(); i++){
+      if(readUserData(i).username === username && readUserData(i).password){
+        isLoginSuccessful = true; 
+      }
+    }
     if (isLoginSuccessful) {
       onLoginSuccess(); 
     } else {

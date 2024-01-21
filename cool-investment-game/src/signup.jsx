@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import './Signup.css'; // Make sure to create a Signup.css file for styling
-import writeUserData from 'writeUser.js'
+import './Signup.css'; 
 
 const Signup = ({ onSignupSuccess }) => {
   const [username, setUsername] = useState('');
@@ -9,13 +8,12 @@ const Signup = ({ onSignupSuccess }) => {
 
   const handleSignup = (event) => {
     event.preventDefault();
-    // TODO: Add actual signup logic here
-    const isSignupSuccessful = true; // Simulate a successful signup
+    const isSignupSuccessful = true; 
 
     if (isSignupSuccessful) {
-      onSignupSuccess(); // Call the onSignupSuccess function passed as a prop
+      onSignupSuccess(); 
     } else {
-      // Handle signup failure (e.g., display an error message)
+
     }
   };
 
@@ -56,8 +54,8 @@ const Signup = ({ onSignupSuccess }) => {
           </label>
           <button type="submit" className="signup-button">Sign Up</button>
         </form>
-        writeUserData(readCounter(), username, password, 0, 0)
-        writeCounter(readCounter)
+        <script>writeUserData(readCounter(), username, password, 0, 0)
+        writeCounter(readCounter)</script>
       </div>
     </div>
   );

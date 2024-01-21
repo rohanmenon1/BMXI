@@ -52,7 +52,7 @@ const counterData = function counterData(){
   onValue(userJson, (snapshot) => {
     const data = snapshot.val();
 
-    console.log(data);
+    return data
   });
 }
 
