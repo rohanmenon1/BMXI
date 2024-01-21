@@ -34,11 +34,12 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const database = getDatabase(app);
 
-const writerStocks = function writeStockData(stockId, stockName, arrayOfPrices) {
+const writerStocks = function writeStockData(stockId, stockName, arrayOfPrices, numOwned) {
   set(ref(database, 'stock/' + stockId), {
     stockId: stockId,
     stockName: stockName,
-    arrayOfPrices: arrayOfPrices
+    arrayOfPrices: arrayOfPrices,
+    numOwned: numOwned
   });
 }
 
