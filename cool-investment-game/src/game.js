@@ -17,21 +17,18 @@ const Game = ({ loginID, previousScore, gamesPlayed }) => {
     <div className="dashboard">
       <div className="section stock-list">
         <h2>Select a stock{loginID}</h2>
-        <li>
-          <button>Gluegle: GGL</button> <br/>
-        </li>
-        <li>
-          <button>Netflyx: NTX</button> <br/>
-        </li>
-        <li>
-          <button>Spotifree: SPT</button> <br/>
-        </li>
-        <li>
-          <button>Amazoom: AMZ </button> <br/>
-        </li>
-        <li>
+        <div className="button-container">
+          <button>Google: GGL</button> <br/>
+          <button>Netflix: NTX</button> <br/>
+          <button>Spotify: SPT</button> <br/>
+          <button>Amazon: AMZ </button> <br/>
           <button>Blomberg: BML </button> <br/>
-        </li>
+          <button>Gluegle: GGL</button> <br/>
+          <button>Netflyx: NTX</button> <br/>
+          <button>Spotifree: SPT</button> <br/>
+          <button>Amazoom: AMZ </button> <br/>
+          <button>Blomberg: BML </button> <br/>
+          </div>
       </div>
       <div className="section main-content">
         <marquee> AI News Goes Here.                          Warren Buffet says buy Google Stock and eat beans</marquee>
