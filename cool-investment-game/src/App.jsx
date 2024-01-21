@@ -5,6 +5,10 @@ import Login from './login';
 import Signup from './signup';
 import Game from './game';
 import Dashboard from './dashboard';
+import readerData from './readUserData';
+import writerStocks from './writeStock';
+import writerUser from './writeUser';
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -96,8 +100,12 @@ function readUserData(userId){
     useState(userId, data);
   });
 }
+readerData(1);
+writerStocks(1, "Google", "999;992;823");
+writerUser(1, "Rohan", "BigBeans", 10000, 3);
+
 
 //writeUserData(1, "Rohan", "wow", "sdasd");
-writeStockData(1, "Google", 999, "999,999,100");
+//writeStockData(1, "Google", 999, "999,999,100");
 
 export default App;

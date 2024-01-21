@@ -46,9 +46,15 @@ const db = getDatabase();
 //   });
 // }
 
-function readUserEmail(userId){
-  const userEmail = ref(db, 'users/' + userId + '/email');
-  onValue(userEmail, (snapshot) => {
-    console.log(userEmail)
+const readerData = function readUserData(userId){
+  const db = getDatabase(app);
+  const userJson = ref(db, 'users/' + userId);
+  onValue(userJson, (snapshot) => {
+    const data = snapshot.val();
+
+    console.log(data);
   });
 }
+
+
+export default readerData;
