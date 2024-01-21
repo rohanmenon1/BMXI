@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Signup.css'; 
+import writeUserData from './writeUser.js'
+import writeCounter from './readCounter.js'
 
 const Signup = ({ onSignupSuccess }) => {
   const [username, setUsername] = useState('');
@@ -9,9 +11,12 @@ const Signup = ({ onSignupSuccess }) => {
   const handleSignup = (event) => {
     event.preventDefault();
     const isSignupSuccessful = true; 
+    console.log(1)
 
     if (isSignupSuccessful) {
+      writeUserData(writeCounter(), {username}, {password}, 0, 0)
       onSignupSuccess(); 
+      console.log('ok')
     } else {
 
     }
@@ -54,8 +59,6 @@ const Signup = ({ onSignupSuccess }) => {
           </label>
           <button type="submit" className="signup-button">Sign Up</button>
         </form>
-        <script>writeUserData(readCounter(), username, password, 0, 0)
-        writeCounter(readCounter)</script>
       </div>
     </div>
   );

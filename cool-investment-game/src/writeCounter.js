@@ -36,8 +36,8 @@ const database = getDatabase(app);
 
 const writerCounter = function writeCounterData(number) {
   const db = database;
-  set(ref(db, 'counter/' + number), {
-    counterNumber: number + 1
+  set(ref(db, 'counter/'), {
+    counter: number + 1
   });
 }
 
