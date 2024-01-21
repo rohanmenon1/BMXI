@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css'; // Make sure to create a Login.css file for styling
 import { Link } from 'react-router-dom';
+import readUserData from 'readUserData.js'
 
 
 const Login = ({ onLoginSuccess }) => {
@@ -10,12 +11,12 @@ const Login = ({ onLoginSuccess }) => {
   const handleLogin = (event) => {
     event.preventDefault();
     // TODO: Add actual login logic here
-    const isLoginSuccessful = true; // Simulate a successful login
+    const isLoginSuccessful = readUserData(username, password); 
 
     if (isLoginSuccessful) {
-      onLoginSuccess(); // Call the onLoginSuccess function passed as a prop
+      onLoginSuccess(); 
     } else {
-      // Handle login failure (e.g., display an error message)
+      console.log("Incorrect Login Credentials")
     }
   };
 

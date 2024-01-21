@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import './Signup.css'; // Make sure to create a Signup.css file for styling
+import writeUserData from 'writeUser.js'
 
 const Signup = ({ onSignupSuccess }) => {
   const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
 
@@ -35,16 +35,6 @@ const Signup = ({ onSignupSuccess }) => {
             />
           </label>
           <label className="signup-label">
-            Email:
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </label>
-          <label className="signup-label">
             Password:
             <input
               type="password"
@@ -66,6 +56,8 @@ const Signup = ({ onSignupSuccess }) => {
           </label>
           <button type="submit" className="signup-button">Sign Up</button>
         </form>
+        writeUserData(readCounter(), username, password, 0, 0)
+        writeCounter(readCounter)
       </div>
     </div>
   );
