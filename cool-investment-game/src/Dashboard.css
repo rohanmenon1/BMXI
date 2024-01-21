@@ -12,32 +12,27 @@ body, html {
   
   .dashboard-header {
     padding: 10px 0;
-    background-color: #333; /* Choose a color that fits your design */
+    background-color: #585651; 
     color: #fff;
-    font-size: 2.5em; /* Adjust the font size as needed */
+    font-size: 2.5em; 
   }
   
   .dashboard {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    padding-top: 0.5px; /* Add some space between the header and the sections */
-    height: calc(100vh - 100px); /* Adjust height to account for the header */
+    padding-top: 0.5px; 
+    height: calc(100vh - 100px); 
     box-sizing: border-box;
-  }
-  
-  /* Continue with your existing .section and other styles */
-  
+  }  
 
   .main-content h1 {
-    color: #fff; /* Title color */
-    margin-bottom: 2px; /* Space below the title */
+    color: #060606; 
+    margin-bottom: 2px; 
   }
 
-  /* In Dashboard.css */
-
   .play-button {
-  /* Style your button */
+
     background: none;
     border: none;
     cursor: pointer;
@@ -45,42 +40,44 @@ body, html {
   }
 
   .play-button img {
-  /* You can specify dimensions if needed */
+
     width: 300px;  
     height: 300px;
-    display: block; /* This removes extra space beneath the image inside the button */
+    display: block; 
   }
   
   .play-button:hover {
-    /*background-color: #46a049; /* Slightly darker green on hover */
-    transform: scale(1.25); /* Slightly increase button size on hover */
+    transform: scale(1.25); 
   }
   
   .play-button:active {
-    transform: scale(0.95); /* Slightly decrease button size when clicked */
+    transform: scale(0.95); 
   }
   
   .section {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
+    flex-direction: column; 
     justify-content: flex-start; /* Align items to the top */
-    align-items: center; /* Center items horizontally */
+    align-items: center; 
     padding: 20px;
     margin: 10px;
-    flex-grow: 0.3; /* Adjust flex-grow as needed */
+    flex-grow: 0.3; 
     border-radius: 8px;
-    background: #424242; /* Slightly lighter section background */
-    height: calc(100% - 150px); /* Adjust the height to account for padding */
+    background: #424242; 
+    height: calc(100% - 150px); 
   }
-  
     
-  /* Main content section */
   .main-content {
-    flex-grow: 2; /* Main content takes more space */
+    flex-grow: 2; 
+  }
+  .user-stats {
+    background-color: #c4a67816; 
+    color: #fff;
+  }
+  .leaderboard{
+    background-color: #eac18a67;
   }
   
-  
-  /* Add styles for leaderboard and user stats list items */
   .leaderboard ul, .user-stats ul {
     width: 100%;
     list-style-type: none;
@@ -92,18 +89,14 @@ body, html {
 .leaderboard .entry:not(.entry-0):not(.entry-1):not(.entry-2) { background-color: #2ed573; } /* Other places */
 .leaderboard li {
     display: flex;
-    justify-content: space-between; /* This will create space between the flex items */
-    align-items: center; /* This will vertically center align items in the list */
+    justify-content: space-between; 
+    align-items: center; 
   }
   
   .leaderboard .name {
     flex-grow: 1; /* This allows the name to take up any available space */
     margin: 0 10px; /* This adds some space to the left and right of the name */
   }
-  
-.leaderboard .entry:hover {
-  border-color: #ffffff; /* White border on hover */
-}
 
   
   /* Further styling for the list items */
@@ -114,6 +107,7 @@ body, html {
     width: 100%;
     box-sizing: border-box;
   }
+
 
 li {
   font-size: 0.9em; 
@@ -147,7 +141,7 @@ li {
 }
 
 .stock-list button:active {
-  background-color: #3e8e41; /* Even darker green when active */
+  background-color: #3e8e41;
   box-shadow: 0 5px #666; /* Shadow effect for button press */
   transform: translateY(4px); /* Moves the button down when pressed */
 }
@@ -168,19 +162,19 @@ li {
   }
   
   .stock-column {
-    text-align: center; /* Center content in each column */
+    text-align: center; 
   }
   
   /* First column (stock name) */
   .stock-item .stock-name {
-    flex: 2; /* Twice as large as the other two columns */
+    flex: 2; 
   }
   
   /* Second column (stock trend) */
   .stock-item .stock-trend-column {
     flex: 1;
     display: flex;
-    justify-content: center; /* Center the trend line within its column */
+    justify-content: center; 
   }
   
   /* Third column (stock price) */
@@ -193,7 +187,7 @@ li {
   
   .stock-trend-column {
     display: flex;
-    justify-content: center; /* Center the trend line within its column */
+    justify-content: center; 
   }
   
   .stock-trend {
@@ -218,6 +212,4 @@ li {
     font-weight: bold; /* Makes the price stand out */
     font-size: 1rem; /* Adjust the size as needed */
   }
-  
-  /* You can add more styling as needed */
-  
+    
