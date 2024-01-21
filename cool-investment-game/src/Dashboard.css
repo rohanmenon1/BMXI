@@ -120,15 +120,13 @@ li {
   margin-bottom: 10px; 
 }
 .button-container {
-  max-height: 390px; /* Set a fixed height */
-  overflow-y: auto; /* Add vertical scroll */
+  max-height: 390px; 
+  overflow-y: auto; 
   padding: 10px;
-  /*border: 1px solid #ccc; /* Optional, for styling */
-  /*border-radius: 10px; /* Optional, for rounded corners */
 }
 
 .button-container button {
-  margin: 5px 0;
+  margin: 13px 0;
 }
 
 .stock-list button {
