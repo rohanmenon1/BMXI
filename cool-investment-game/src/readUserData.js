@@ -51,7 +51,7 @@ const readerData = function readUserData(userId){
   const userJson = ref(db, 'users/' + userId);
   onValue(userJson, (snapshot) => {
     const data = snapshot.val();
-
+    
     return data
   });
 }

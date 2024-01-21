@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css'; 
 import { Link } from 'react-router-dom';
-import readUserData from './readUserData.js'
+import readerData from './readUserData.js'
 import counterData from './readCounter.js';
 
 
@@ -13,13 +13,19 @@ const Login = ({ onLoginSuccess }) => {
     event.preventDefault();
     let isLoginSuccessful = false; 
     for(let i = 1; i <= counterData(); i++){
-      if(readUserData(i).username === username && readUserData(i).password){
+      let x = readerData(i)
+      console.log(2)
+      if(x.username.localecompare(username) && x.pass.localecompare(password)){
+        console.log(3)
         isLoginSuccessful = true; 
+        break;
       }
     }
     if (isLoginSuccessful) {
       onLoginSuccess(); 
     } else {
+      console.log(counterData())
+      console.log(readerData(1))
       console.log("Incorrect Login Credentials")
     }
   };

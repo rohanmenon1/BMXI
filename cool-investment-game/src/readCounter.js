@@ -51,7 +51,7 @@ const counterData = function counterData(){
   const userJson = ref(db, 'counter/');
   onValue(userJson, (snapshot) => {
     const data = snapshot.val();
-
+    
     return data
   });
 }
